@@ -1,5 +1,7 @@
 package com.company;
 
+import java.util.Scanner;
+
 public class Person {
     private String firstName,
                     lastName;
@@ -18,10 +20,14 @@ public class Person {
         return Age;
     }
 
-    public void input(String name ,String lastName , int birthYear){
-        this.firstName=name;
-        this.lastName=lastName;
-        this.birthYear=birthYear;
+    public void input(){
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Введите имя : ");
+        this.firstName = scanner.nextLine();
+        System.out.println("Введите фамилию : ");
+        this.lastName = scanner.nextLine();
+        System.out.println("Введите возраст : ");
+        this.birthYear = scanner.nextInt();
     }
 
     public String output(){

@@ -18,8 +18,8 @@ public class Main {
             Person p4 = new Person("Alex","Rayn");
             p4.setBirthYear(1998);
 
-            Person p5 = new Person("Il","Rew");
-            p5.setBirthYear(1995);
+            Person p5 = new Person();
+            p5.input();
 
         p1.changedName("Neiskander","Nebombulaev");
 
@@ -28,5 +28,6 @@ public class Main {
         System.out.println(p3.info());
         System.out.println(p4.info());
         System.out.println(p5.info());
+
     }
 }
