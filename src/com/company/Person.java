@@ -3,7 +3,7 @@ package com.company;
 public class Person {
     private String firstName,
                     lastName;
-    public int birthYear;
+    private int birthYear;
 
     public Person(){
 
