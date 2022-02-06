@@ -84,7 +84,7 @@ public class Main {
 
         Car.info(Car.orderByTheYear(car));
 
-        System.out.println("\nНеотсортированный масив машин\n");
+        System.out.println("\nНеотсортированный масcив машин\n");
         Car.info(car);
     }
 }
