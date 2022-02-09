@@ -4,21 +4,14 @@ abstract public class Car {
     private String model;
     private int maxSpeed;
     private int yearOfManufacture;
-    public String info(){
-        return "";
-    }
+    abstract public String info();
+    public abstract String run() ;
+    public abstract String stop() ;
 
     public Car(String model, int maxSpeed, int yearOfManufacture) {
         this.model = model;
         this.maxSpeed = maxSpeed;
         this.yearOfManufacture = yearOfManufacture;
-    }
-
-    public String run() {
-        return getModel()+" RUN";
-    }
-    public String stop() {
-       return getModel()+" STOP";
     }
 
     public String getModel() {

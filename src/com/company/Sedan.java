@@ -9,5 +9,10 @@ public class Sedan extends Car{
     public String info(){
         return "Модель : "+getModel()+"\nМаксимальная скорость : "+getMaxSpeed()+"\nГод выпуска : "+getYearOfManufacture()+"\nТип : Sedan";
     }
-
+    public String run() {
+        return getModel()+" RUN";
+    }
+    public String stop() {
+        return getModel()+" STOP";
+    }
 }
