@@ -20,8 +20,7 @@ public class ColorLine extends Line{
     @Override
     public String toString(){
         return "\nColor line\n Point 1\n"+getP1()+"\n Point 2\n"+getP2()+"\n Color : "+getColor();
-//        return "Point 1\nx = "+getP1().getX()+" y = "+getP1().getY()+
-//               "Point 2\nx = "+getP2().getX()+" y = "+getP2().getY()+"\nColor : "+getColor();
+
     }
     public void print(){
         System.out.println(toString());
