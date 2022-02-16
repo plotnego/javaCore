@@ -15,6 +15,8 @@ public class Main {
             .addIsAirConditioning(true)
             .build();
 
+    // Вопрос : Как после такого создания объекта   Car car = Car.getCar().build(); установить параметры (модель,год и т.д.?)
+
         System.out.println(car.toString());
 
         WrapperShape <Shape> WS = new WrapperShape<>(new Square());
