@@ -72,6 +72,11 @@ public class Main {
         employeeMap.put(33,"Joji");
         employeeMap.put(8,"Dexter");
 
+        for(Iterator k = employeeMap.entrySet().iterator();k.hasNext();){
+            Map.Entry entry = (Map.Entry) k.next();
+            System.out.println("\nKey "+entry.getKey()+" Value "+entry.getValue());
+        }
+
         Scanner sc = new Scanner(System.in);
         System.out.println("\nВведите ID");
         int id = sc.nextInt();
