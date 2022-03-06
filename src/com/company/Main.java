@@ -1,25 +1,12 @@
 package com.company;
-
-import java.util.Arrays;
 import java.util.Scanner;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class Main {
-//    Enter in the console sentence of five words.
-//    display the longest word in the sentence
-//    determine the number of its letters
-//    bring the second word in reverse order
-        //Enter a sentence that contains the words between more than one space.
-        // Convert all spaces, consecutive, one.
-        // For example, if we introduce the sentence "I    am      learning     Java   Core»,
-        // we have to get the "I'm learning Java Core»
-
-
 
 // проверка на 5 слов.
     public static boolean fiveWords(String sent){
-//        Pattern pattern = Pattern.compile("^([a-zA-z]+\\s+)([a-zA-z]+\\s+)([a-zA-z]+\\s+)([a-zA-z]+\\s+)([a-zA-z]+)");
         Pattern pattern = Pattern.compile("^(([a-zA-zа-яА-Я]+\\s+){4})([a-zA-zа-яА-Я]+)");
         Matcher m = pattern.matcher(sent);
         return m.matches();
