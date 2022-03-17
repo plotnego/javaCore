@@ -50,9 +50,7 @@ public class Main {
             num[0]=readNumber(2,99);
             for(int i=1;i<num.length;i++){
                 num[i]=readNumber(2,99);
-                if(num[i]==num[i-1])
-                    throw new InputMismatchException("Несоблюдение 1 < a1 < ... < a10 < 100");
-                if(num[i]<num[i-1])
+                if(num[i]==num[i-1] || num[i]<num[i-1])
                     throw new InputMismatchException("Несоблюдение 1 < a1 < ... < a10 < 100");
             }
             System.out.println(Arrays.toString(num));
@@ -62,9 +60,6 @@ public class Main {
         } catch (InputMismatchException e){
             System.err.println(e);
         }
-
-        //
-
 
 
     }
@@ -90,7 +85,7 @@ public class Main {
             e.printStackTrace();
         }
         if (!(n >= start && n <= end))
-            throw new IndexOutOfBoundsException("Число вне пределах границ");
+            throw new IndexOutOfBoundsException("Число вне  диапазона");
         return n;
     }
 }
