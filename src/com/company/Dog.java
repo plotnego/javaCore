@@ -1,7 +1,7 @@
 package com.company;
 
 public class Dog {
-    public String name;
+    private String name;
     private String breed;
     private int age;
 
