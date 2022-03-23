@@ -1,12 +1,10 @@
 package com.company;
-
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class Main {
 
     public static void main(String[] args) {
-
         Scanner sc = new Scanner(System.in);
         System.out.println("Введите три числа : ");
         try {
@@ -43,7 +41,7 @@ public class Main {
         } catch (InputMismatchException e) {
             System.err.println("Некорректные данные");
         }
-//
+
         System.out.println("Введите номер HTTP ошибки");
         Scanner sc2 = new Scanner(System.in);
         try {
