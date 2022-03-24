@@ -1,6 +1,6 @@
 package com.company;
 
-public class SalariedEmployee extends Employee {
+public class SalariedEmployee extends Employee implements Payment {
     public SalariedEmployee(String name, double hourlyRate, double numberOfHoursWorked, int socialSecurityNumber) {
         super(name);
         this.hourlyRate=hourlyRate;

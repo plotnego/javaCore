@@ -1,6 +1,6 @@
 package com.company;
 
-public class ContractEmployee extends Employee {
+public class ContractEmployee extends Employee implements Payment {
     public ContractEmployee(String name,double fixedMonthlyPayment,int federalTaxIdmember) {
         super(name);
         this.fixedMonthlyPayment=fixedMonthlyPayment;
@@ -27,4 +27,5 @@ public class ContractEmployee extends Employee {
         System.out.println("ID : "+getEmployeeId()+"\nName : "+getName()+"\nSalary : "+calculatePay());
 
     }
+
 }

@@ -2,13 +2,14 @@ package com.company;
 
 import java.util.Comparator;
 
-public class Employee implements Payment {
+public class Employee  {
 
-    static SetSalaryComparator SetSalaryComparator = new SetSalaryComparator();
+    static EmpComp EmpComp = new EmpComp();
 
-    public static Comparator getSetSalaryComparator() {
-        return SetSalaryComparator;
+    public static Comparator getEmpComp() {
+        return EmpComp;
     }
+
 
     private static int count;
     private  final int employeeId ;
@@ -37,9 +38,4 @@ public class Employee implements Payment {
 
     }
 
-
-    @Override
-    public double calculatePay() {
-        return 0;
-    }
 }
