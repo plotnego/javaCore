@@ -17,5 +17,6 @@ public class Main {
         System.out.println(st1.info()+" | "+st1.activity());
         System.out.println(st2.info()+" | "+st2.activity());
 
+
     }
 }

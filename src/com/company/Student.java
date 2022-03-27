@@ -1,11 +1,19 @@
 package com.company;
 
+import java.util.InputMismatchException;
+
 public class Student extends Person{
     private int course;
 
     public Student(FullName fullName, int age,int course) {
         super(fullName, age);
-        this.course=course;
+        try{
+            if(course>=1 && course<=5) this.course=course;
+            else throw new InputMismatchException("Введены некорректные данные");
+        }catch (InputMismatchException e){
+            System.err.println(e.getMessage());
+        }
+
     }
 
     public int getCourse() {
@@ -14,7 +22,9 @@ public class Student extends Person{
 
     @Override
     public String info(){
-        return "Имя: "+fullName.getFirstName()+", Фамилия: "+fullName.getLastName()+", Возраст: "+getAge()+", Курс: "+getCourse();
+        if (fullName.getFirstName()==null || fullName.getLastName()==null || getAge()==0 || getCourse()==0)
+            return "Объект заполнен не полностью";
+        else return "Имя: "+fullName.getFirstName()+", Фамилия: "+fullName.getLastName()+", Возраст: "+getAge()+", Курс: "+getCourse();
     }
 
     @Override
