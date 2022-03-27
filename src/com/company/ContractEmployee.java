@@ -24,7 +24,13 @@ public class ContractEmployee extends Employee implements Payment {
     }
     @Override
     public void info(){
-        System.out.println("ID : "+getEmployeeId()+"\nName : "+getName()+"\nSalary : "+calculatePay());
+        try{
+            if(this.getName()==null) throw new NullPointerException("Объект заполнен не полностью");
+            System.out.println("ID : "+getEmployeeId()+"\nName : "+getName()+"\nSalary : "+calculatePay());
+        } catch (NullPointerException e){
+            System.err.println(e.getMessage());
+        }
+
 
     }
 
