@@ -7,13 +7,17 @@ import java.time.DayOfWeek;
 import java.time.LocalDate;
 import java.time.temporal.TemporalAdjusters;
 import java.util.*;
+import java.util.stream.Collectors;
 
 
 public class Main {
 
     public static void Sort(List<String> stringList){
+
         Collections.sort(stringList, String::compareTo);
+
     }
+
     public static void main(String[] args) {
 
         try(BufferedReader br = new BufferedReader(new InputStreamReader(System.in))){
@@ -22,18 +26,15 @@ public class Main {
             int n = Integer.parseInt(br.readLine());
             if(n<=0) throw new InputMismatchException("zero or negative");
 //Закомментировал первые выводы т.к. захотел работать с одним списком рандомных чисел для наглядности.
-        // 1
+            // 1
 //            random.ints().limit(n).forEach(System.out::println);
-        // 2
+            // 2
 //            random.ints().limit(n).sorted().forEach(System.out::println);
 
             //3
-            //Вопрос , как можно по другому записать в коллекцию рандомные числа?
-            // Можно ли через стрим?
-            List<Integer> integerList =  new ArrayList<>(n);
-            for (int i = 0; i < n; i++) {
-                integerList.add(i, random.nextInt());
-            }
+
+            List<Integer> integerList = random.ints().limit(n).distinct().boxed().collect(Collectors.toList());
+
             System.out.println("Original");
             integerList.stream().forEach(System.out::println);
 
@@ -65,3 +66,4 @@ public class Main {
         System.out.println("Sorted :"+stringList);
     }
 }
+
