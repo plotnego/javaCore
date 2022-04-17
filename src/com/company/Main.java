@@ -7,14 +7,13 @@ import java.time.DayOfWeek;
 import java.time.LocalDate;
 import java.time.temporal.TemporalAdjusters;
 import java.util.*;
-import java.util.stream.Collectors;
 
 
 public class Main {
 
     public static void Sort(List<String> stringList){
 
-        Collections.sort(stringList, String::compareTo);
+        stringList.sort(String::compareTo);
 
     }
 
@@ -33,10 +32,10 @@ public class Main {
 
             //3
 
-            List<Integer> integerList = random.ints().limit(n).distinct().boxed().collect(Collectors.toList());
+            List<Integer> integerList = random.ints().limit(n).distinct().boxed().toList();
 
             System.out.println("Original");
-            integerList.stream().forEach(System.out::println);
+            integerList.forEach(System.out::println);
 
             System.out.println("Sorted");
 //Вопрос : какой вариант сортировки оптимальней? Collections.sort(integerList); или ↓
@@ -50,7 +49,7 @@ public class Main {
             System.out.println("max2 ="+max2.get());
 //вариант поиска мах 3 какой лучше? последние два видимо почти одно и тоже.
             Optional<Integer> max3 = integerList.stream().max((x,y)->x.compareTo(y));
-            System.out.println("max2 ="+max2.get());
+            System.out.println("max3 ="+max3.get());
 
         } catch (Exception e) {
             System.err.println(e.getMessage());
