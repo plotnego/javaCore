@@ -16,8 +16,6 @@ public class Main {
     }
     public static void main(String[] args) {
 
-//        System.out.println("Enter n");
-//        Random random = new Random();
         try(BufferedReader br = new BufferedReader(new InputStreamReader(System.in))){
             System.out.println("Enter n");
             Random random = new Random();
