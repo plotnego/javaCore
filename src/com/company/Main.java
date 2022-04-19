@@ -123,7 +123,7 @@ public class Main {
 	List<String> list2 = new ArrayList<>(list1);
     list2.removeIf(x->x.length()>=5);
     System.out.println("list1:"+list1+"\n"+
-                        "list2"+list2);
+                        "list2:"+list2);
 
     String s = "AbC";
         System.out.print(
